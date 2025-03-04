@@ -37,7 +37,7 @@ export default function Home() {
 
     const clientSeed = crypto.randomUUID();
     try {
-      const response = await axios.post(`${NEXT_PUBLIC_API_URL}/roll-dice`, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/roll-dice`, {
         betAmount: parseFloat(betAmount),
         clientSeed,
       });
